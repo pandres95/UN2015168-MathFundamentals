@@ -1,0 +1,48 @@
+\input{../Common/preamble.tex.tpl}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Sesión dos - se trabajaran las nociones de validez y deducibilidad, enfatizando la relación entre estas dos nociones (T. Validez, T. Completitud)
+\end{abstract}
+
+
+\begin{enumerate}
+
+\item Discuta con sus compañeros sobre la noción de validez y deducibilidad. Responda lo siguiente:
+\begin{itemize}
+    \item ¿Existe una relación entre validez y deducibilidad?
+    \item Suponga un conjunto de premisas $\Lambda$, ¿ es posible deducir cualquier cosa a partir de este conjunto ?
+    \item ¿Cuándo un conjunto de premisas $\Lambda$ se dice consistente ?
+\end{itemize}
+
+\item Valide si los siguientes conjuntos de premisas son consistentes.
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item $\{\neg p_{1} \wedge p_{2} \rightarrow p_{0}, p_{1} \rightarrow (\neg  p_{1} \rightarrow p_{2}), p_{0}  \leftrightarrow \neg p_{2}\}$
+\end{itemize}
+\columnbreak
+\begin{itemize}
+    \item $\{p_{0} \rightarrow p_{1}, p_{0} \wedge p_{2} \rightarrow p_{1} \wedge p_{3}, p_{0} \wedge p_{2} \wedge p_{4} \rightarrow p_{1} \wedge p_{3} \wedge p_{5}, ... \}$
+\end{itemize}
+\end{multicols}
+
+\item Considere los siguientes enunciados, indique si los argumentos son validos y en los casos validos brinde una deducción. En este punto no se puede utilizar el método de reducción al absurdo.
+
+\begin{itemize}
+    \item Si alguien ve o alguien oye, hay alguien que está alerta. Si es cierto que alguien ve solo si no es posible la total sorpresa, entonces hay algo previsible. Luego, o bien nada hay previsible, o es posible la total sorpresa aunque haya alguien alerta.
+
+    \item $ p_{1},p_{1} \rightarrow p, q_{1} \rightarrow q, p_{2} \rightarrow q_{1}, r \rightarrow p_{2} , p \rightarrow (q \vee  r ) \wedge \neg (q \wedge r )  \implies q \wedge  \neg r $
+
+    \item $ \neg p \rightarrow (q \rightarrow \neg r), r \rightarrow \neg p, (\neg w \vee p) \rightarrow \neg \neg r, \neg w \implies \neg q $
+    \item $ t \wedge w , q \rightarrow \neg t , \neg ( \neg p \wedge  \neg r ) , \neg q \rightarrow \neg p , r \rightarrow s \implies r $
+\end{itemize}
+
+\item Discuta con sus compañeros el método de reducción al absurdo, ¿por qué creen que funciona el método? Brinde deducciones a los problemas del punto anterior utilizando absurdo.
+
+\end{enumerate}
+
+\input{../Common/footer.tex.tpl}

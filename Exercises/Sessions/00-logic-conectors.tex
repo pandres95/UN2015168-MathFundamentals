@@ -1,0 +1,97 @@
+\input{../Common/preamble.tex.tpl}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Sesión uno - la sesión busca profundizar en los temas de conectores lógicos, tautologías, equivalencias e implicaciones lógicas.
+\end{abstract}
+
+\begin{enumerate}
+
+\item Escriba en español una frase cuya proposición sea:
+
+\begin{multicols}{2}
+
+  \begin{itemize}
+  \item $(p \rightarrow q) \vee r$
+  \item $\neg r \rightarrow \neg(p \vee q)$
+  \end{itemize}
+
+\columnbreak
+
+  \begin{itemize}
+  \item $\neg ((p \rightarrow q ) \rightarrow r))$
+  \item $\neg (p \wedge r ) \rightarrow \neg q $
+  \end{itemize}
+
+\end{multicols}
+
+\item Indique cuáles de las siguientes son tautologías, demuestre que son una tautología mediante tablas de verdad.
+
+\begin{itemize}
+	\item $(\alpha \rightarrow \xi ) \rightarrow ((\beta \rightarrow \xi) \rightarrow (\alpha \vee \beta \rightarrow \xi )) $
+    \item $(p \rightarrow (q \rightarrow r)) \rightarrow ((p \rightarrow q) \rightarrow (p \rightarrow r))$
+    \item $(a \rightarrow b ) \rightarrow ((a \rightarrow c ) \rightarrow (a \rightarrow b \wedge c))$
+\end{itemize}
+
+\item Desarrolle el punto anterior sin usar tablas de verdad.
+
+\item Determine cuáles de las siguientes son tautologías, NO use tablas de verdad.
+
+\begin{multicols}{2}
+
+  \begin{itemize}
+  \item $( (q \wedge r) \leftrightarrow t ) \rightarrow ( (p \vee \neg q  \vee r \vee s ) \rightarrow  t) $
+  \end{itemize}
+
+\columnbreak
+
+  \begin{itemize}
+  \item $((\neg q \wedge t ) \rightarrow r ) \rightarrow ((q \wedge \neg r) \vee t ) \wedge w \wedge p $
+  \end{itemize}
+
+\end{multicols}
+
+\item Escriba las siguientes proposiciones utilizando únicamente el conectivo o ($\vee$) y la negación $(\neg)$.
+
+\begin{multicols}{2}
+
+  \begin{itemize}
+  \item $(p \wedge q ) \rightarrow r $
+  \item $\neg p \rightarrow \neg q $
+  \item $[(\varphi \rightarrow \psi) \rightarrow (\varphi \rightarrow \sigma)] \rightarrow [(\varphi \rightarrow (\psi \rightarrow \sigma)]$
+  \end{itemize}
+
+\columnbreak
+
+  \begin{itemize}
+  \item $(a \wedge b) \leftrightarrow \neg ( a \rightarrow b )$
+  \item $(p_{1} \wedge (p_{2} \wedge ... (p_{n-1} \wedge p_{n}))$
+  \item $(p_{1} \rightarrow (p_{2} \rightarrow ... (p_{n-1} \rightarrow p_{n}))$
+  \end{itemize}
+
+\end{multicols}
+
+\item Determine si las siguientes son equivalencias o implicaciones lógicas.
+
+\begin{multicols}{2}
+
+  \begin{itemize}
+  \item $((p \rightarrow q ) \rightarrow q ) \rightarrow q \Leftrightarrow p \rightarrow q $
+  \item $p \vee ( \neg q \wedge r ) \Rightarrow q \vee \neg r \rightarrow p $
+  \end{itemize}
+
+\columnbreak
+
+  \begin{itemize}
+  \item $(a \wedge b) \Leftrightarrow \neg ( a \rightarrow b )$
+  \item $p \rightarrow q \vee r \Rightarrow (p \rightarrow q ) \rightarrow r $
+  \end{itemize}
+
+\end{multicols}
+
+\end{enumerate}
+
+\input{../Common/footer.tex.tpl}

@@ -1,0 +1,134 @@
+\input{../Common/preamble.tex.tpl}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Sesión cuatro - Preparcial.
+\end{abstract}
+
+\begin{enumerate}
+
+    \item Brinde una deducción del siguiente argumento. Suponga que las funciones no tienen problemas de ningún tipo.
+     $$\forall y \exists x (f(x) = y) , \forall y \exists x (g(x) = y) \implies \forall y \exists x (f(g(x)) = y ) $$
+
+    \begin{solucion}
+
+    Esta prueba tiene su detalle, hay que especificar el universal y luego el existencial, indicando que se tiene una relación entre los elementos.
+
+    \begin{tabular}{c c c}
+         (1) & $\forall y \exists x (f(x) = y)$ & Premisa \\
+         (2) & $\forall y \exists x (g(x) = y)$ & Premisa \\
+
+         (3) & $ \exists x (f(x) = b)$ & Para todo $b$ en el universo, especificación del universal en (1) \\
+         (4) & $ (f(a) = b)$ & Para todo $b$ en el universo y algún $a$ que depende de $b$, especificación del existencial en (3) \\
+
+         (5) & $ \exists x (g(x) = d)$ & Para todo $d$ en el universo, especificación del universal en (2) \\
+         (6) & $ (g(c) = d)$ & Para todo $d$ en el universo y algún $c$ que depende de $d$, especificación del existencial en (5) \\
+
+         (7) & $g(c) = a $ & Para todo $a$ en el universo y algún $c$ que depende de $a$, caso particular cuando $d= a$ en (6). \\
+         (8) & $f(g(c)) = b$ & Para todo $b$ en el universo y algún $c$ que depende de $b$, remplazo de $a$ según (7) en (4) \\
+
+         (9) & $\exists x (f(g(x)) = b)$ & Para todo $b$ en el universo, generalización del existencial en (8) \\
+         (10) & $\forall y \exists x  (f(g(x)) = b)$ & Generalización del universal en (9)
+
+
+
+    \end{tabular}
+
+    \end{solucion}
+
+
+
+    \item Escriba en correcto español, considere el universo de los naturales.
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item $p \vee t \rightarrow ( q \rightarrow s)  $
+    \end{itemize}
+
+    \columnbreak
+
+    \begin{itemize}
+        \item $\forall k ( p(k) \rightarrow p(k+1)) \rightarrow \forall n ( p(n)) $
+    \end{itemize}
+    \end{multicols}
+
+
+    \begin{solucion}
+
+    (1) Si, p o q entonces, s es necesario para p.
+
+
+    (2) Tomando como referencia el universo de los naturales y pensando en una propiedad cualquiera se puede indicar de la siguiente manera:
+
+    Si, para todo natural cada vez que se cumple la propiedad para $n$ implica la propiedad para $n+1$. Entonces todo natural cumple la propiedad.
+
+    \end{solucion}
+
+    \item Valide si los siguientes argumentos son validos, consistentes y brinde una deducción para aquellos validos.
+
+    \begin{multicols}{2}
+        \begin{center}
+        \begin{tabular}{c}
+             $\neg (p \vee q ) $\\
+             $r \vee t $ \\
+             $\neg q \rightarrow \neg r$ \\
+             $t \rightarrow p$ \\
+             \hline
+             $p \leftrightarrow t \wedge r $
+        \end{tabular}
+        \end{center}
+    \columnbreak
+        \begin{center}
+        \begin{tabular}{c}
+            $(r \vee s ) \rightarrow ( t \wedge u ))$ \\
+            $ \neg r \rightarrow (v \rightarrow \neg v) $ \\
+            $\neg t$ \\
+            \hline
+            $\neg v $
+
+        \end{tabular}
+        \end{center}
+    \end{multicols}
+
+    \begin{solucion}
+
+    \begin{itemize}
+        \item Las premisas son inconsistentes y por lo tanto el argumento es valido. Existe una derivación, pero esto es inmediato de la inconsistencia.
+
+        \item Las premisas son consistentes, tome $v,r,s$ falsos y $t$ verdadero. El argumento es válido, y por lo tanto existe una derivación de la conclusión.
+    \end{itemize}
+    \end{solucion}
+
+
+    \item Determine si es tautología.
+
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item $(l \rightarrow (m\rightarrow n)) \rightarrow ( m \rightarrow (l \rightarrow n ))$
+    \end{itemize}
+    \columnbreak
+    \end{multicols}
+
+    \begin{solucion}
+    Para que la proposición sea una tautología se necesita que el antecedente sea verdadero y el consecuente falso. Analice el consecuente, éste debe ser falso por lo que la única opción posible es que $m$ y $l$ son verdaderos y $n$ falso, pero estos valores hacen el antecedente falso. Por lo tanto no existen valores que hagan la proposición falsa.
+
+    \end{solucion}
+
+    \item Sean $n,m$ enteros, si $nm$ es impar, entonces $n$ y $m$ son impares.
+
+    \begin{solucion}
+        Se procede por reducción al absurdo. Suponga que $nm$ es impar y \emph{ $n$ o $m$ es par}
+        \begin{itemize}
+            \item Si $n$ es par y $m$ es impar, entonces $n = 2k $ para algún $K$ entero y $m = 2l+1$ para algún $l$ entero. Con lo cual $nm = (2k)(2l+1) = 2(k)(2l+1)$ usando asociatividad en el producto de enteros, observe que $k(2l+1)$ es entero y por lo tanto $nm = 2h$ con $h$ entero. De lo cual $nm$ es par y esto contradice el hecho que sea impar. No es posible que se de este caso.
+
+            \item Si $n$ es impar y $m$ es par, la prueba es análoga.
+            \item Si ambos son pares, prueba análoga.
+        \end{itemize}
+
+        Al analizar los tres se llega a un absurdo, por lo tanto la afirmación original debe ser verdad.
+    \end{solucion}
+\end{enumerate}
+
+\input{../Common/footer.tex.tpl}

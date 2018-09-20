@@ -1,0 +1,148 @@
+\input{../Common/preamble.tex.tpl}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Sesión tres - se trabajaran los conceptos de cuantificadores, fortaleciendo las reglas de inferencia para éstos.
+\end{abstract}
+
+\begin{enumerate}
+    \item Determine si las siguientes son equivalencias lógicas y niegue las sentencias, piense en el conjunto de los naturales para buscar contraejemplos.
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item $\forall x (p(x) \wedge q(x)) \Leftrightarrow \forall x p(x) \wedge \forall x q(x)  $
+        \item $\forall x (p(x) \vee q(x)) \Leftrightarrow \forall x p(x) \vee \forall x q(x)  $
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item $\exists x (p(x) \wedge q(x)) \Leftrightarrow \exists x p(x) \wedge \exists x q(x)  $
+        \item $ \exists x (p(x) \vee q(x)) \Leftrightarrow \exists x p(x) \vee \exists x q(x)  $
+    \end{itemize}
+    \end{multicols}
+
+    \begin{solucion}
+    ~\newline
+    \begin{itemize}
+        \item Es una equivalencia lógica, su prueba es la siguiente:
+
+        ~\newline
+        \begin{tabular}{c c c}
+            (1) &   $\forall x (p(x) \wedge q(x)) $& Premisa  \\
+            (2) & $  p(a) \wedge q(a) $ & Para todo a en el universo, particularización del universal en (1).  \\
+            (3) & $ p(a) $ & Para todo a en el universo, Simplificación de la conjunción en (2) \\
+            (4) &  $ q(a) $ & Para todo a en el universo, Simplificación de la conjunción en (2) \\
+            (5) & $\forall x (p(x))$ & Generalización del universal en (3). \\
+            (6) & $\forall x (q(x))$ & Generalización del universal en (4). \\
+            (7) & $\forall x (p(x)) \wedge \forall x (q(x)) $ & Introducción de la conjunción de (5) y (6), conclusión.
+        \end{tabular}
+
+        ~\newline
+        Si leen con cuidado, la prueba se puede llevar de abajo hacia arriba con algunos detalles menores.
+
+        \item No es equivalencia lógica, tome el universo como los números naturales, p(x) := x es par y q(x) := x es impar. Si bien es cierto que para todo x, x es par o impar, no es cierto que de aquí se pueda concluir que para todo x, x es par o que para todo x, x es impar.
+        \item No es equivalencia lógica, tome el universo de los números naturales, p(x) := x es par y q(x) := x es impar. Es cierto que existe un número natural que es par, por ejemplo 2, y es cierto que existe un número natural impar, por ejemplo 3. Pero de esto no se puede concluir que exista un número natural que sea par e impar al tiempo.
+        \item Es equivalencia lógica, la demostración queda pendiente.
+
+    \end{itemize}
+
+    \end{solucion}
+
+
+    \item Escriba las siguientes sentencias en español, tome el universo de todos los conjuntos.
+
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item $\forall x \forall y (\forall z ( z \in x \leftrightarrow z \in y ) \rightarrow x = y )$
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item $\forall x \exists y \forall z (\forall u (u \in z \rightarrow u \in x ) \rightarrow z \in y ) $
+    \end{itemize}
+    \end{multicols}
+
+    \begin{solucion}
+
+    Teniendo en cuenta que $U = \{Todos\ los\ conjuntos\}$, en español se pueden escribir estas sentencias de la siguiente manera:
+
+    \begin{itemize}
+        \item Para todo conjunto $x$ y para todo conjunto $y$: si todo conjunto $z$ está en $x$ si y solo si $z$ está en $y$, entonces $x$ es igual a $y$.
+        \item Para todo conjunto x, existe un conjunto y, para todo conjunto z: Si, para todo conjunto u, u está en z implica que u está en x. Entonces z está en y.
+    \end{itemize}
+
+    Es importante anotar que para este universo los elementos son objetos como los naturales, reales, partes de un conjunto, etc. No son elementos del conjunto objetos como 2,$\pi$, etc.
+    \end{solucion}
+
+    \item Analice las siguientes sentencias, trabaje con los universos $\mathbb{N},\mathbb{Z},\mathbb{R},\mathbb{C},\mathcal{P}(X)$, en donde $X$ es un conjunto cualquiera.
+
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item  $ \forall x \exists y ( x < y ) $
+        \item $\forall x \forall y ( x \otimes y = x ) $
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item $ \forall x \forall y ( x - y) $ vive en el universo.
+        \item $ \exists y \forall x ( y < x ) $
+    \end{itemize}
+    \end{multicols}
+
+    \begin{solucion}
+    De acuerdo a lo hablado en clase, no se deben tener en cuenta los conjuntos
+    \end{solucion}
+
+    \item Lea la siguiente prueba usando la premisa dada, determine si se están utilizando correctamente los cuantificadores.
+
+    \begin{itemize}
+        \item Dos métricas se dicen equivalentes si existen $s,t \in \mathbb{R}$ tales que $d(x,y) \leq s.m(x,y)$ y $m(x,y) \leq t.d(x,y)$.
+
+        \item Dadas las métricas $e$ y $f$ se tiene que $e(x,y) \leq 2f(x,y)$.
+
+        Prueba: La segunda premisa me indica que $e(x,y) \leq 2f(x,y)$ y por lo tanto puedo decir que $f(x,y) \leq 2e(x,y)$. Con lo cual las métricas $e$, $f$ son equivalentes.
+
+    \end{itemize}
+
+    \begin{solucion}
+        La anterior demostración no es valida, observe que la noción de métricas equivalentes tiene dos cuantificadores existenciales, uno para $s$ y otro para $t$. La segunda premisa me da el valor para $s$ y esto no quiere decir que pueda tener el valor de $t$, pero en la prueba yo digo que incluso son el mismo valor. Recuerden que el hecho que tengan garantizada la existencia del primero no les dice absolutamente nada sobre la existencia del segundo.
+    \end{solucion}
+
+    \item Brinde deducciones para los siguientes argumentos.
+
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item $\forall x \forall y (f(x) = f(y) \rightarrow x = y), \forall x \forall y (g(x) = g(y) \rightarrow x = y) \implies \forall x  \forall y (f(g(x)) = f(g(x)) \rightarrow x = y )$
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item $\forall y \exists x (f(x) = y) , \forall y \exists x (g(x) = y) \implies \forall y \exists x (f(g(x)) = y ) $
+    \end{itemize}
+    \end{multicols}
+
+    \begin{solucion}
+
+    La idea para estas dos pruebas es utilizar el teorema de la deducción (regla del condicional).
+    \begin{itemize}
+        \item Se introduce como premisa lo siguiente, $f(g(e_{0})) = f(g(e_{1}))$ para todos $e_{0},e_{1}$ en el universo. \newline
+        \begin{tabular}{c c c}
+             (1) & $\forall x \forall y (f(x) = f(y) \rightarrow x = y)$ & Premisa \\
+             (2) & $\forall x \forall y (g(x) = g(y) \rightarrow x = y)$ & Premisa \\
+             (3) & $f(g(e_{0})) = f(g(e_{1}))$ & Para todos $e_{0},e_{1}$ en el universo, premisa regla del condicional. \\
+             (4) & $\forall y (f(a) = f(y) \rightarrow a = y)$ & Para todo a en el universo, especificación del universal en (2). \\
+             (5) & $ f(a) = f(b) \rightarrow a = b$ & Para todos a,b en el universo, especificación del universal en (4). \\
+             (6) & $ \forall y (g(c) = g(y) \rightarrow c = y)$ & Para todo c en el universo, especificación del universal en (2). \\
+             (7) & $ g(c) = g(d) \rightarrow c = d$ & Para todos c,d en el universo, especificación del universal en (6). \\
+             (8) & $g(e_{0}) = g(e_{1})$ &  Para todos $e_{0},e_{1}$ en el universo, modus ponens entre (3) y (5) \\
+             (8) & $e_{0} = e_{1}$ &  Para todos $e_{0},e_{1}$ en el universo, modus ponens entre (9) y (7) \\
+             (10) & $f(g(e_{0})) = f(g(e_{1})) \rightarrow e_{0} = e_{1}$ & Para todos$e_{0},e_{1}$ en el universo, regla del condicional en (3)  y (9).  \\
+             (11) & $ \forall y ( f(g(e_{0})) = f(g(y)) \rightarrow e_{0} = y)$ & Para todo $e_{0}$ en el universo, generalización del universal en (10). \\
+             (12) & $ \forall x \forall y ( f(g(x)) = f(g(y)) \rightarrow x = y)$ & Generalización del universal en (11), conclusión.
+        \end{tabular}
+
+        \item Ver más abajo.
+    \end{itemize}
+
+    \end{solucion}
+\end{enumerate}
+
+\input{../Common/footer.tex.tpl}
