@@ -1,6 +1,6 @@
 <p align="center"><img src="banner-cs.svg" width="100%"></p>
 
-# 2026573 - Introduccion a las Ciencias de la Computacion y a la Programación
+# 2015168 - Fundamentos de Matemáticas
 
 ## Contenido
 
